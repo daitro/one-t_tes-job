@@ -1,0 +1,29 @@
+{
+	"name": "rn-npf-server",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "cross-env NODE_ENV=PRODUCTION node index.js",
+		"serve": "nodemon index.js",
+		"client": "npm run start --prefix client",
+		"client:install": "npm install --prefix client",
+		"client:build": "npm run build --prefix client",
+		"dev": "cross-env NODE_ENV=development concurrently \"npm run serve\" \"npm run client\""
+	},
+	"author": "daitro",
+	"license": "ISC",
+	"dependencies": {
+		"concurrently": "^7.1.0",
+		"config": "^3.3.7",
+		"cors": "^2.8.5",
+		"express": "^4.17.2"
+	},
+	"devDependencies": {
+		"cross-env": "^7.0.3",
+		"eslint": "^8.2.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-plugin-import": "^2.25.2",
+		"nodemon": "^2.0.15"
+	}
+}
